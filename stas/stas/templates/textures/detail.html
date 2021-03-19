@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Chosen Textures number: {{texture.id}}{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+<h1>Информация о текстуре</h1>
+<body>
+    
+    <div class="inner">
+        <ul>
+            <li>Номер заказа : {{texture.oder_number}} </li>
+            <li>Изделие : {{texture.material}} </li>
+            <li>Размер : {{texture.size}} </li>
+            <li>Дата заказа : {{texture.oder_date}} </li>
+            <li>Дата сдачи : {{texture.delivery_date}} </li>
+            <li>Номер SN : {{texture.sn_number}} </li>
+            <li>Статус : {{texture.status}} </li>
+        </ul>
+        
+    </div>
+            
+    <table class="outer">
+        <tr>
+            
+            <td>Текстура1</td>
+            <td>Декоратор1</td>
+            <td>Статус1</td>
+            <td>Дата1</td>
+            <td>Комментарий1</td>
+            <td>Текстура2</td>
+            <td>Декоратор2</td>
+            <td>Статус2</td>
+            <td>Дата2</td>
+            <td>Комментарий2</td>
+        
+        </tr>
+        
+        <tr>
+            
+            <td>{{texture.texture1}}</td>
+            <td>{{texture.decorator1}}</td>
+            <td>{{texture.status1}}</td>
+            <td>{{texture.date1}}</td>
+            <td>{{texture.comment1}}</td>
+            <td>{{texture.texture2}}</td>
+            <td>{{texture.decorator2}}</td>
+            <td>{{texture.status2}}</td>
+            <td>{{texture.date2}}</td>
+            <td>{{texture.comment2}}</td>
+        
+        </tr>
+        
+        
+        
+    </table>
+    
+    <input type="button" class="texture-batton" value="Вернуься на главную" onClick='location.href="{% url 'textures:index' %}"'>
+            
+        
+            
+    
+</body>
+{% endblock %}

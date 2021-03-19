@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+
+{% block title %}Last Textures{% endblock %}
+{% load static %}
+{% block content %}
+<body>
+<div class="card-title">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<h1>Список текстур:</h1>
+    
+
+
+
+    <ul class="games-item">
+    {% if latest_textures %}
+        
+        {% for a in latest_textures %}
+ <li><a href="{% url 'textures:detail' a.id %}">Texture: {{a.oder_number}}</a></li>  &nbsp; 
+        {% endfor %}
+
+    {% else %}
+        There is no textures =(
+    {% endif %}
+    
+    </ul>
+
+    
+    </div>
+
+<div class="card-title">
+
+<h1>Фильтрация:</h1>
+
+<table class="filter-table">
+    
+    
+    
+    <colgroup>
+        <col span="7" style="background:Plum">
+    </colgroup>
+    <form action="" method="get">
+        
+        
+    <tr>
+      
+        <td>Номер заказа</td>
+        <td>Sn номер</td>
+        <td>Текстура 1</td>
+        <td>Текстура 2</td>
+        <td>Размер</td>        
+       
+    </tr>
+    
+    <tr class="filter-tr">
+    
+        
+        <td>{{form.oder}}</td>
+        <td>{{form.sn}}</td>
+        <td>{{form.texture1}}</td>
+        <td>{{form.texture2}}</td>
+        <td>{{form.size}}</td>
+        
+        
+    </tr>
+    
+    
+    
+    {% if textures %}
+        {% for b in textures %}
+    
+        <tr>
+    
+            <td>{{b.oder_number}}</td>
+            <td>{{b.sn_number}}</td>
+            <td>{{b.texture1}}</td>
+            <td>{{b.texture2}}</td>
+            <td>{{b.size}}</td>
+        </tr>
+        {% endfor %}
+    
+    
+    {% elif ident == False %}
+        
+        <p>There is no textures =(</p>
+    
+    {% endif %}
+    
+    
+    {% if ident == True %}
+    
+    <p>Please start your filter</p>
+    
+    {% endif %}
+    
+    
+    
+
+</table>
+  
+<input type="submit" value="Фильрация по" >
+    </form>
+    <form>
+<input type="button" value="Обнуление фильтра" onClick='location.href="{% url 'textures:index' %}"'>
+</form>
+
+</div>
+
+
+<div class="card-title">
+
+    <h4><!--  --></h4>
+<h1> Таблица: </h1>
+
+
+<table class="main-table">
+     
+    <tr>
+        <th>Номер заказа:</th>
+        <th>Изделие:</th>
+        <th>Размер:</th>
+        <th>Дата заказа:</th>
+        <th>Дата сдачи:</th>
+        <th>Номер SN:</th>
+        <th>Статус:</th>
+        <th>Текстура1</th>
+        <th>Декоратор1</th>
+        <th>Статус1</th>
+        <th>Дата1</th>
+        <th>Комментарий1</th>
+        <th>Текстура2</th>
+        <th>Декоратор2</th>
+        <th>Статус2</th>
+        <th>Дата2</th>
+        <th>Комментарий2</th>
+        
+    </tr>
+    
+    
+    
+    
+        {% for a in latest_textures %}
+    
+        <tr>
+    
+            <td>{{a.oder_number}}</td>
+            <td>{{a.material}}</td>
+            <td>{{a.size}}</td>
+            <td>{{a.oder_date}}</td>
+            <td>{{a.delivery_date}}</td>
+            <td>{{a.sn_number}}</td>
+            <td>{{a.status}}</td>
+            <td>{{a.texture1}}</td>
+            <td>{{a.decorator1}}</td>
+            <td>{{a.status1}}</td>
+            <td>{{a.date1}}</td>
+            <td>{{a.comment1}}</td>
+            <td>{{a.texture2}}</td>
+            <td>{{a.decorator2}}</td>
+            <td>{{a.status2}}</td>
+            <td>{{a.date2}}</td>
+            <td>{{a.comment2}}</td>
+        
+        </tr>
+    
+        {% endfor %}
+  
+    
+     
+
+    
+    
+        
+
+</table>
+
+
+</div>
+{% endblock %}
+    </body>

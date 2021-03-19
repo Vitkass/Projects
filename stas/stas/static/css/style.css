@@ -1,0 +1,196 @@
+ p  {
+    margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+    background-color:#f2f2f2;
+}
+
+
+#dle-content {
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	padding-bottom: 50px;
+}
+
+.games-item {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+    padding: 0;
+    
+	justify-content:flex-start;
+	
+    
+}
+
+.games-item li {
+	display:inline-block;
+    justify-content: center;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    width: 100px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    background-color: #ccddff;
+}
+
+
+.games-item a {
+    color:#669;
+    text-decoration: none;
+    
+}
+
+
+
+.games-item li:hover {
+    background-color:#eef7fa;
+    
+}
+
+
+
+
+.card-title {
+	border-bottom: 1px #383838 solid;
+	padding-bottom: 12px;
+	margin-top: -3px;
+}
+
+.card-title h4 {
+	color: #f0f0f0;
+	font-size: 30px;
+	font-weight: 500;
+	font-family: 'SF UI Display', sans-serif;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.inner {
+    
+    background-color: ghostwhite;
+    color: black;
+    font-size: 34px;
+    text-align: justify;
+    line-height: 1.5;
+    width: 49%;
+    height: 400px;
+    margin: 300px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 75px;
+    margin-top: 15px;
+    border: 2px solid #69c;
+    border-radius: 25px;
+    
+}
+
+.outer {
+    
+    font-size: 25px;
+    border-spacing: 15px;
+    border-collapse:separate;
+    border: 2px solid #69c;
+    border-radius: 25px;
+    margin: auto;
+    
+    
+    
+    
+    
+}   
+
+
+.screen {
+    
+    background-color: azure;
+}
+
+.texture-batton   {
+    
+    margin-left: 1200px;
+    margin-top: 30px;
+    font-size: 13px;
+    padding: 0.5% 10px;
+    background-color: ghostwhite;
+    border: 1px solid black;
+    border-radius: 10px;
+       
+}
+
+.texture-batton:hover{
+    background-color: #ccddff;
+}
+
+
+.filter-table{
+    
+    border-collapse: collapse;
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 900px;
+    border-radius: 30px;
+    border:2px solid #ccddff;
+
+    
+}
+
+.filter-table td {
+    text-align: center;
+    color:#669;
+    background-color: #ccddff;
+    
+}
+
+.filter-tr{
+        
+}
+
+.filter-tr td {
+    
+    padding-top: 5px;
+    border-top: 1px dashed black;
+    background-color: #f2f2f2;
+    text-align: justify;
+    
+}
+
+.main-table{
+    border: 1px solid #69c;
+    border-collapse: collapse;
+}
+
+.main-table th{
+    font-weight: normal;
+    color: #039;
+    border-bottom: 1px dashed #69c;
+    padding: 12px 17px;
+}
+
+.main-table td{
+    color: #669;
+  padding: 7px 17px;
+}
+
+.main-table tr:hover td
+{
+    background: #ccddff;
+}
+
+
+
+
+
+
+
