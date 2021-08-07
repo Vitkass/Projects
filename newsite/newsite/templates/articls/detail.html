@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}{{article.articl_title}}{% endblock %}
+
+{% block content %}
+
+<h2>{{article.articl_title}}</h2>
+<p>{{article.articl_text}}<p>
+<em>{{article.pub_date}}</em>
+
+{% if article.was_published_recently %}
+New Article
+{% endif %}
+
+<hr>
+
+{% if latest_commet_list %}
+	
+	{% for c in latest_commet_list %}
+		<p>
+			
+			<strong>{{c.autor_name}}</strong>
+
+			<p>{{c.comment_text}}</p>
+		</p>
+	{% endfor %}
+
+
+
+
+{% else %}
+Comments not found be first
+{% endif %}
+
+
+
+</hr>
+
+
+<form action="{% url 'articls:leave_comment' article.id %}" method="POST">
+
+
+	{% csrf_token %}
+	<input type="text" required placeholder="Your name" name="name" ><br>
+	<textarea name="text" required="" placeholder="Comment text" colls="40" rows="15"></textarea><br>
+
+	<button type="submit">Leave comment</button>
+
+</form> 
+
+{% endblock %}

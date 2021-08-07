@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #110056; -webkit-text-stroke: #110056; background-color: #ffffff; background-color: rgba(255, 255, 255, 0)}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #0e2f1c; -webkit-text-stroke: #0e2f1c; background-color: #ffffff; background-color: rgba(255, 255, 255, 0)}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #135f02; -webkit-text-stroke: #135f02; background-color: #ffffff; background-color: rgba(255, 255, 255, 0)}
+    span.s1 {font-kerning: none; color: #0e2f1c; -webkit-text-stroke: 0px #0e2f1c}
+    span.s2 {font-kerning: none; color: #135f02; -webkit-text-stroke: 0px #135f02}
+    span.s3 {font-kerning: none; color: #9b5308; -webkit-text-stroke: 0px #9b5308}
+    span.s4 {font-kerning: none}
+    span.s5 {font-kerning: none; color: #424241; -webkit-text-stroke: 0px #424241}
+    span.s6 {font-kerning: none; color: #1200fc; -webkit-text-stroke: 0px #1200fc}
+    span.s7 {font-kerning: none; color: #576f18; -webkit-text-stroke: 0px #576f18}
+    span.s8 {font-kerning: none; color: #960014; -webkit-text-stroke: 0px #960014}
+    span.s9 {font-kerning: none; color: #110056; -webkit-text-stroke: 0px #110056}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;</span><span class="s2"><b>h1</b></span><span class="s1">&gt;</span><span class="s3">{{</span><span class="s1"> </span><span class="s4">question.question_text</span><span class="s1"> </span><span class="s3">}}</span><span class="s1">&lt;/</span><span class="s2"><b>h1</b></span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s4"><br>
+</span></p>
+<p class="p2"><span class="s4">&lt;</span><span class="s2"><b>ul</b></span><span class="s4">&gt;</span></p>
+<p class="p1"><span class="s3">{%</span><span class="s1"> </span><span class="s2"><b>for</b></span><span class="s1"> </span><span class="s4">choice</span><span class="s1"> </span><span class="s2"><b>in</b></span><span class="s1"> </span><span class="s4">question.choice_set.all</span><span class="s1"> </span><span class="s3">%}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2"><b>li</b></span><span class="s1">&gt;</span><span class="s3">{{</span><span class="s1"> </span><span class="s4">choice.choice_text</span><span class="s1"> </span><span class="s3">}}</span><span class="s1"> -- </span><span class="s3">{{</span><span class="s1"> </span><span class="s4">choice.votes</span><span class="s1"> </span><span class="s3">}}</span><span class="s1"> vote</span><span class="s3">{{</span><span class="s1"> </span><span class="s4">choice.votes</span><span class="s5">|</span><span class="s6">pluralize</span><span class="s1"> </span><span class="s3">}}</span><span class="s1">&lt;/</span><span class="s2"><b>li</b></span><span class="s1">&gt;</span></p>
+<p class="p3"><span class="s3">{%</span><span class="s1"> </span><span class="s4"><b>endfor</b></span><span class="s1"> </span><span class="s3">%}</span></p>
+<p class="p2"><span class="s4">&lt;/</span><span class="s2"><b>ul</b></span><span class="s4">&gt;</span></p>
+<p class="p2"><span class="s4"><br>
+</span></p>
+<p class="p2"><span class="s4">&lt;</span><span class="s2"><b>a</b></span><span class="s4"> </span><span class="s7">href</span><span class="s5">=</span><span class="s8">"</span><span class="s3">{%</span><span class="s4"> </span><span class="s2"><b>url</b></span><span class="s4"> </span><span class="s8">'polls:detail'</span><span class="s4"> </span><span class="s9">question.id</span><span class="s4"> </span><span class="s3">%}</span><span class="s8">"</span><span class="s4">&gt;Vote again?&lt;/</span><span class="s2"><b>a</b></span><span class="s4">&gt;</span></p>
+</body>
+</html>
